@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-bootstrap-templatetags",
-    version="2.1.15",
+    version="2.1.16",
     description="Vanilla Bootstrap structures in simple rendering blocks",
     author="Autumn Valenta",
     author_email="steven@pivotal.energy",
