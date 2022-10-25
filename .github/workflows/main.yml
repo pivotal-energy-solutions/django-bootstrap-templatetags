@@ -242,7 +242,7 @@ jobs:
           TASK_ALWAYS_EAGER: 1
           GITHUB_TOKEN: ${{ secrets.ORGANIZATIONAL_REPO_TOKEN }}
         run: |
-          bumper.py --directory . --exclude=.github,demo_app \
+          bumper.py --directory . --exclude=.github \
             --version_files bootstrap_templatetags/__init__.py \
             --repo=pivotal-energy-solutions/django-bootstrap-templatetags > out.json
           echo "bumped=$(jq '.bumped' out.json)" >> $GITHUB_OUTPUT
