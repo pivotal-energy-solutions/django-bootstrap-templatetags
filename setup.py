@@ -26,7 +26,7 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Topic :: Utilities",
     ],
-    python_requires=">=3.9.*",
+    python_requires=">=3.9",
     install_requires=[
         "django>=4.0",
     ],
