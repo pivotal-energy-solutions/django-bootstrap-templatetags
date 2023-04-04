@@ -4,8 +4,8 @@ from django.test import SimpleTestCase
 
 
 class BootstrapTemplateTagTest(SimpleTestCase):
+    # This is a test file
     def test_rendered(self):
-
         context = Context({"title": "my_title"})
         template_to_render = Template(
             """
