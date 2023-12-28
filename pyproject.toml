@@ -50,11 +50,8 @@ test = [
 Homepage = "https://github.com/pivotal-energy-solutions/django-bootstrap-templatetags"
 Issues = "https://github.com/pivotal-energy-solutions/django-bootstrap-templatetags/issues"
 Download = "https://github.com/pivotal-energy-solutions/django-bootstrap-templatetags"
-Homepage = "https://github.com/pivotal-energy-solutions/django-bootstrap-templatetags/"
 Thanks = "https://saythanks.io/to/rh0dium"
 Source = "https://github.com/pivotal-energy-solutions/django-bootstrap-templatetags/"
-
-
 
 [tool.hatch.version]
 path = "bootstrap_templatetags/__init__.py"
