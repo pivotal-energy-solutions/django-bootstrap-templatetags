@@ -88,7 +88,7 @@ exclude = '''
 
 [tool.bandit]
 targets = ['bootstrap_templatetags']
-exclude_dirs = ["bootstrap_templatetags/tests.py"]
+exclude_dirs = ["bootstrap_templatetags/tests.py", "demo"]
 skips = ["B308", "B703", ]
 
 [tool.coverage.run]
