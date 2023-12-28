@@ -109,7 +109,7 @@ ignore_errors = true
 sort = "cover"
 
 [tool.bumper]
-exclude = [".idea", ".github", "demo_app"]
+exclude = [".idea", ".github", "demo"]
 version_files = ["bootstrap_templatetags/__init__.py"]
 repo = "pivotal-energy-solutions/django-bootstrap-templatetags"
 report = "out.json"
