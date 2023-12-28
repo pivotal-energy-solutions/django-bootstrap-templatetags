@@ -85,14 +85,15 @@ exclude = '''
   | dist
 )/
 '''
-extend-exclude = '''
-# A regex preceded with ^/ will apply only to files and directories
-# in the root of the project.
-/static/.py  # exclude a file named foo.py in the root of the project (in addition to the defaults)
-'''
+
+[tool.bandit]
+targets = ['bootstrap_templatetags']
+exclude_dirs = ["bootstrap_templatetags/tests.py"]
+skips = ["B308", "B703", ]
 
 [tool.coverage.run]
 branch = true
+command_line = "demo/manage.py test --noinput --settings=demo.settings_test bootstrap_templatetags"
 omit = [
     "*/demo/**",
     "*/migrations/*",
@@ -106,3 +107,9 @@ skip_covered = true
 skip_empty = true
 ignore_errors = true
 sort = "cover"
+
+[tool.bumper]
+exclude = [".idea", ".github", "demo_app"]
+version_files = ["bootstrap_templatetags/__init__.py"]
+repo = "pivotal-energy-solutions/django-bootstrap-templatetags"
+report = "out.json"
