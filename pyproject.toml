@@ -7,7 +7,7 @@ name = "django-bootstrap-templatetags"
 dynamic = ["version"]
 description = "Vanilla Bootstrap structures in simple rendering blocks"
 readme = "README.md"
-license = "Apache License 2.0"
+license = "LICENSE.txt"
 requires-python = ">=3.9"
 authors = [
     { name = "Pivotal Energy Solutions", email = "steve@pivotal.energy" },
