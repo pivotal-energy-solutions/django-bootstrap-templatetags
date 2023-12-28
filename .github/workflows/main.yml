@@ -162,8 +162,7 @@ jobs:
           retention-days: 1
 
       - name: Django Check
-        run: |
-          python demo_app/manage.py check
+        run: export PYTHONPATH=`pwd` && python demo_app/manage.py check
 
   coverage:
     name: Upload Coverage to Codecov
