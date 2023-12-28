@@ -60,12 +60,14 @@ path = "bootstrap_templatetags/__init__.py"
 include = [
     "/bootstrap_templatetags",
     "/bootstrap_templatetags/templates/**/*",
+    "/bootstrap_templatetags/static/**/*",
 ]
 
 [tool.hatch.build.targets.wheel]
 packages = ['bootstrap_templatetags']
 include = [
     "/bootstrap_templatetags/templates/**/*",
+    "/bootstrap_templatetags/static/**/*",
 ]
 
 [tool.black]
