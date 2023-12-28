@@ -94,7 +94,7 @@ extend-exclude = '''
 [tool.coverage.run]
 branch = true
 omit = [
-    "*/demo_app/**",
+    "*/demo/**",
     "*/migrations/*",
     "*/tests/**",
 ]
