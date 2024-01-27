@@ -42,7 +42,7 @@ test = [
     "flake8",
     "coverage",
     "pre-commit",
-    "black==23.12.1", # Keep in sync with pre-commit
+    "black",
     "bandit"
 ]
 
