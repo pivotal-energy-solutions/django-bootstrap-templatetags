@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 __name__ = "bootstrap_templatetags"
 __author__ = "Pivotal Energy Solutions"
 __version_info__ = (2, 1, 36)

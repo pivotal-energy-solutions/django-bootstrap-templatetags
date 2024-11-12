@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from functools import partial, wraps
 from inspect import getfullargspec
 
