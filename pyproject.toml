@@ -52,6 +52,10 @@ Source = "https://github.com/pivotal-energy-solutions/django-bootstrap-templatet
 
 [tool.hatch.version]
 source = "vcs"
+fallback-version = "0.0.0.0"
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.hatch.build.targets.sdist]
 include = [
@@ -101,6 +105,5 @@ sort = "cover"
 
 [tool.bumper]
 exclude = [".idea", ".github", "demo"]
-version_files = ["bootstrap_templatetags/__init__.py"]
 repo = "pivotal-energy-solutions/django-bootstrap-templatetags"
 report = "out.json"
