@@ -99,7 +99,7 @@ class BootstrapAccordion(BaseBootstrapTag):
         import warnings
 
         warnings.warn(
-            "The bootstrap_accordion's {% group %} tag is deprecated; use {% panel %}" " instead",
+            "The bootstrap_accordion's {% group %} tag is deprecated; use {% panel %} instead",
             DeprecationWarning,
         )
         return self.panel(context, nodelist, heading, style=style)
