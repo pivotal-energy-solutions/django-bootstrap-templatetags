@@ -1,8 +1,11 @@
 from functools import partial, wraps
-from inspect import getfullargspec
+from inspect import getfullargspec, signature
 
 from django.template import Node
 from django.template.library import parse_bits
+
+# Django 6.1 dropped parse_bits()'s takes_context parameter.
+_PARSE_BITS_TAKES_CONTEXT = "takes_context" in signature(parse_bits).parameters
 
 
 class EasyTag(Node):
@@ -40,9 +43,10 @@ class EasyTag(Node):
                 params.pop(params.index(param))
 
         bits = token.split_contents()[1:]
-        args, kwargs = parse_bits(
-            parser, bits, params, varargs, varkw, defaults, (), (), None, name
-        )
+        parse_bits_args = [parser, bits, params, varargs, varkw, defaults, (), ()]
+        if _PARSE_BITS_TAKES_CONTEXT:
+            parse_bits_args.append(None)
+        args, kwargs = parse_bits(*parse_bits_args, name)
         kwargs.update(zip(params, args))
         return partial(wrapped, **kwargs)
 
